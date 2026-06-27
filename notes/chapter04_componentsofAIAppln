@@ -1,0 +1,102 @@
+Chapter 5 – Components of an AI Application
+
+Many beginners think an AI application is simply:
+
+User → LLM → Answer
+
+In reality, production AI applications consist of several components.
+
+1. User Interface (UI)
+
+This is the part users interact with.
+
+Examples:
+
+Chat window
+Buttons
+Quiz screen
+Dashboard
+
+Its job is to collect user input and display responses.
+
+2. Backend
+
+The backend controls the application's logic.
+
+Responsibilities include:
+
+Receiving requests from the UI
+Calling the LLM
+Saving user progress
+Retrieving stored information
+Managing application flow
+
+The backend acts as the brain of the application.
+
+3. Prompt Engine
+
+The Prompt Engine prepares high-quality prompts for the LLM.
+
+Instead of sending:
+
+Explain CNN.
+
+it might send:
+
+You are an expert AI professor.
+
+Explain CNN using the following structure:
+
+1. Beginner explanation
+2. Intermediate explanation
+3. Advanced explanation
+4. Mathematical intuition
+5. Python example
+6. Interview questions
+7. Common mistakes
+
+Good prompt engineering often leads to significantly better responses.
+
+4. Memory
+
+Memory stores information about the user and their learning progress.
+
+Examples:
+
+Topics completed
+Quiz scores
+Weak areas
+Revision history
+
+Memory enables personalized learning.
+
+5. LLM
+
+The Large Language Model generates the response.
+
+It is responsible for:
+
+Answering questions
+Explaining concepts
+Writing code
+Creating quizzes
+Summarizing content
+
+The LLM does not automatically remember previous users or store long-term history unless the application provides that capability.
+
+6. Database
+
+The database stores structured information.
+
+Examples:
+
+User profiles
+Quiz attempts
+Learning history
+Settings
+
+Databases persist information across sessions.
+
+Key Takeaway
+
+An LLM is one component of an AI application, not the entire application.
