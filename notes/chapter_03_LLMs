@@ -1,0 +1,224 @@
+Chapter 4 - Introduction to Large Language Models (LLMs)
+What is a Large Language Model (LLM)?
+Definition
+
+A Large Language Model (LLM) is a deep learning model trained on massive amounts of text data to understand and generate human-like language.
+
+It predicts the next most probable token (piece of text) based on the input it receives.
+
+Examples include:
+
+GPT series
+Llama
+DeepSeek
+Qwen
+Claude
+Mistral
+Gemma
+Why is it called a "Large" Language Model?
+
+There are two reasons:
+
+1. Large Dataset
+
+The model is trained using enormous amounts of text such as:
+
+Books
+Articles
+Wikipedia
+Programming code
+Research papers
+Public web pages
+2. Large Number of Parameters
+
+Parameters are numbers learned during training.
+
+Modern LLMs may contain:
+
+Millions of parameters
+Billions of parameters
+Hundreds of billions of parameters
+
+More parameters generally allow the model to learn more complex patterns, although size alone does not guarantee better performance.
+
+What does an LLM actually do?
+
+An LLM does NOT search Google.
+
+It does NOT search a database by default.
+
+Instead,
+
+It predicts the next token.
+
+For example:
+
+Input:
+
+The capital of France is
+
+The model predicts
+
+Paris
+
+Then predicts the next token.
+
+Then the next.
+
+Then the next.
+
+Until it finishes the answer.
+
+Important Concept
+
+An LLM is fundamentally a next-token prediction engine.
+
+Everything else—conversation, coding, summarization, translation—is built on top of this ability.
+
+Common Misconception
+
+❌ LLMs know everything.
+
+✔ LLMs generate responses based on patterns learned during training and the context provided in the prompt.
+
+Examples of Tasks
+
+An LLM can:
+
+Answer questions
+Write code
+Translate languages
+Summarize documents
+Generate emails
+Explain concepts
+Solve programming problems
+Create quizzes
+Limitations
+
+LLMs can:
+
+Hallucinate (generate incorrect information)
+Forget information outside the context window
+Make reasoning mistakes
+Use outdated knowledge if not connected to external sources
+Interview Question
+
+Q: What is the fundamental task performed by an LLM?
+
+Answer:
+
+An LLM predicts the next most likely token based on the previous context.
+
+
+
+
+  Theory Time
+
+Now let's go much deeper than the notes.
+
+Imagine you're talking to your friend.
+
+You ask:
+
+"What is Machine Learning?"
+
+Your friend doesn't memorize the answer word by word.
+
+Instead, their brain predicts what sentence should come next based on everything they've learned over the years.
+
+An LLM works similarly.
+
+It has seen a huge amount of text during training and learns patterns such as:
+
+Machine Learning →
+usually followed by →
+
+"Machine Learning is a subset of Artificial Intelligence..."
+
+It doesn't "remember" that sentence like a database row.
+
+It predicts that these words are likely to come next.
+
+Example
+
+Suppose I ask:
+
+What is Python?
+
+Inside the LLM, something like this happens conceptually:
+
+Input
+
+↓
+
+Understand context
+
+↓
+
+Predict next token
+
+↓
+
+Predict next token
+
+↓
+
+Predict next token
+
+↓
+
+Complete sentence
+
+Notice something.
+
+It never says:
+
+Searching database...
+
+because there is no database involved by default.
+
+
+
+The Most Important Diagram of This Chapter
+
+Please draw this in your notebook.
+
+                   Training Phase
+
+Books
+Wikipedia
+Research Papers
+GitHub
+Articles
+Code
+
+        │
+        ▼
+
+   Deep Learning Training
+
+        │
+
+        ▼
+
+      LLM Model
+
+===============================
+
+         Inference Phase
+
+User Question
+
+        │
+
+        ▼
+
+     LLM Model
+
+        │
+
+        ▼
+
+Generated Answer
+
+This diagram separates training from inference, a distinction that is crucial in AI engineering.
