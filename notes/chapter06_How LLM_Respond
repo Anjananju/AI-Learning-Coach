@@ -1,0 +1,202 @@
+Chapter 7 - How an LLM Answers a Question
+Objective
+
+To understand the complete journey of a user's question inside an LLM-based application.
+
+Step 1 – User Input
+
+The user enters a question.
+
+Example:
+
+Explain Gradient Descent.
+
+This is plain text.
+
+Step 2 – Prompt Construction
+
+The application does not send only the user's message.
+
+It first builds a prompt.
+
+Example:
+
+System Prompt:
+You are an experienced AI professor.
+
+User Prompt:
+Explain Gradient Descent.
+
+Instruction:
+Use simple language.
+Give examples.
+Explain mathematically.
+Provide interview questions.
+
+This complete prompt is sent to the LLM.
+
+Step 3 – Tokenization
+
+The LLM converts the prompt into tokens.
+
+Example:
+
+Explain
+Gradient
+Descent
+
+Every token receives a numerical token ID.
+
+Step 4 – Embedding
+
+Each token ID is converted into an embedding.
+
+An embedding is a dense numerical vector representing the token in a high-dimensional space.
+
+The model operates on embeddings rather than raw text.
+
+Step 5 – Transformer Processing
+
+The embeddings pass through multiple Transformer layers.
+
+Inside these layers, the model:
+
+Understands context.
+Learns relationships between words.
+Predicts the next token.
+Step 6 – Token Generation
+
+The model predicts the next token.
+
+Example:
+
+Gradient
+
+Then predicts:
+
+Descent
+
+Then predicts:
+
+is
+
+Then predicts:
+
+an
+
+This process repeats until the response is complete.
+
+Step 7 – Detokenization
+
+The generated tokens are converted back into readable text.
+
+The user finally sees:
+
+Gradient Descent is an optimization algorithm...
+
+Entire Pipeline
+User Question
+
+↓
+
+Prompt Construction
+
+↓
+
+Tokenization
+
+↓
+
+Token IDs
+
+↓
+
+Embeddings
+
+↓
+
+Transformer Layers
+
+↓
+
+Next Token Prediction
+
+↓
+
+Generated Tokens
+
+↓
+
+Readable Response
+Key Takeaways
+The LLM never works directly with text.
+The application builds the prompt.
+Tokens become token IDs.
+Token IDs become embeddings.
+The Transformer predicts one token at a time.
+The generated tokens are converted back into text.
+
+
+  consider:
+
+The capital of France is
+
+Possible next words are:
+
+Paris
+London
+Berlin
+
+The model assigns probabilities conceptually like this:
+
+Token	Probability
+Paris	0.96
+London	0.02
+Berlin	0.01
+Other	0.01
+
+The model then chooses the next token according to its decoding strategy (this is where concepts like temperature come in, which we'll study later).
+
+Then the process repeats for the next token.
+
+This is the biggest misconception.
+
+Many people think:
+
+Question
+
+↓
+
+Entire Answer
+
+Actually it's:
+
+Question
+
+↓
+
+Token 1
+
+↓
+
+Token 2
+
+↓
+
+Token 3
+
+↓
+
+Token 4
+
+↓
+
+...
+
+↓
+
+Finished Answer
+
+The response is generated incrementally.
+
+That's also why you often see AI responses appear word by word or chunk by chunk in chat interfaces.
