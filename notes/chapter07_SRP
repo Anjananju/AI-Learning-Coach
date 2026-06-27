@@ -1,0 +1,118 @@
+Single Responsibility Principle (SRP)
+Definition
+
+A software module should have only one reason to change.
+
+Each class, function, or module should perform one responsibility.
+
+Bad Example
+def explain_topic():
+    call_llm()
+    save_database()
+    generate_quiz()
+    update_ui()
+
+This function is doing too many unrelated things.
+
+Good Example
+Teacher Service
+    ↓
+Explain Topic
+
+Quiz Service
+    ↓
+Generate Quiz
+
+Memory Service
+    ↓
+Save Progress
+
+Database Service
+    ↓
+Store Data
+
+Each service has one clear responsibility.
+
+Benefits
+Easier to test
+Easier to maintain
+Easier to extend
+Easier to debug
+Interview Question
+
+What is the Single Responsibility Principle?
+
+A class or module should have only one responsibility and therefore only one reason to change.
+
+
+
+
+
+  Imagine the flow.
+
+User
+
+↓
+
+Frontend
+
+↓
+
+Backend
+
+↓
+
+???
+
+↓
+
+LLM
+
+↓
+
+Answer
+
+What's the ???
+
+Should the backend directly call the LLM?
+
+I don't think so.
+
+Instead, I propose:
+
+User
+
+↓
+
+Frontend
+
+↓
+
+Backend
+
+↓
+
+Teacher Service
+
+↓
+
+LLM
+
+↓
+
+Answer
+
+Why?
+
+Because tomorrow we will also have:
+
+Quiz Service
+Revision Service
+Interview Service
+Roadmap Service
+
+If every feature directly calls the LLM, the code becomes difficult to maintain.
+
+So we introduce a dedicated service for each responsibility.
+
+This is called the Single Responsibility Principle (SRP).
