@@ -1,0 +1,219 @@
+Chapter 6 - Tokens
+What is a Token?
+Definition
+
+A token is the smallest unit of text processed by a Large Language Model.
+
+A token is not always a word.
+
+Depending on the tokenizer, a token may represent:
+
+A complete word
+Part of a word
+A punctuation mark
+A number
+A special symbol
+Even a space in some tokenization schemes
+Examples
+
+Sentence:
+
+Artificial Intelligence is amazing.
+
+Possible tokenization:
+
+Artificial
+Intelligence
+is
+amazing
+.
+
+Five tokens.
+
+Another example:
+
+unbelievable
+
+May become:
+
+un
+believ
+able
+
+Three tokens.
+
+The exact tokenization depends on the tokenizer used by the model.
+
+Why don't LLMs use words directly?
+
+Computers cannot process natural language directly.
+
+They only understand numbers.
+
+Therefore:
+
+Sentence
+
+↓
+
+Tokens
+
+↓
+
+Token IDs
+
+↓
+
+Vectors
+
+↓
+
+Neural Network
+
+This conversion enables the model to perform mathematical operations on language.
+
+Token IDs
+
+Example:
+
+Hello
+
+↓
+
+Token ID = 15496
+World
+
+↓
+
+Token ID = 2159
+
+The specific IDs vary by model and tokenizer.
+
+Important Concept
+
+The model never sees the original text.
+
+It sees only token IDs (which are then converted into embeddings before entering the neural network).
+
+Interview Question
+
+Q: Why is tokenization necessary?
+
+Answer:
+
+Tokenization converts text into smaller units that can be represented numerically. Neural networks operate on numerical data, so tokenization is an essential preprocessing step.
+
+Key Takeaways
+LLMs process tokens, not raw words.
+Tokens are converted into numerical IDs.
+Those IDs are transformed into embeddings before being processed by the model.
+
+  Chapter 6 - Tokens
+What is a Token?
+Definition
+
+A token is the smallest unit of text processed by a Large Language Model.
+
+A token is not always a word.
+
+Depending on the tokenizer, a token may represent:
+
+A complete word
+Part of a word
+A punctuation mark
+A number
+A special symbol
+Even a space in some tokenization schemes
+Examples
+
+Sentence:
+
+Artificial Intelligence is amazing.
+
+Possible tokenization:
+
+Artificial
+Intelligence
+is
+amazing
+.
+
+Five tokens.
+
+Another example:
+
+unbelievable
+
+May become:
+
+un
+believ
+able
+
+Three tokens.
+
+The exact tokenization depends on the tokenizer used by the model.
+
+Why don't LLMs use words directly?
+
+Computers cannot process natural language directly.
+
+They only understand numbers.
+
+Therefore:
+
+Sentence
+
+↓
+
+Tokens
+
+↓
+
+Token IDs
+
+↓
+
+Vectors
+
+↓
+
+Neural Network
+
+This conversion enables the model to perform mathematical operations on language.
+
+Token IDs
+
+Example:
+
+Hello
+
+↓
+
+Token ID = 15496
+World
+
+↓
+
+Token ID = 2159
+
+The specific IDs vary by model and tokenizer.
+
+Important Concept
+
+The model never sees the original text.
+
+It sees only token IDs (which are then converted into embeddings before entering the neural network).
+
+Interview Question
+
+Q: Why is tokenization necessary?
+
+Answer:
+
+Tokenization converts text into smaller units that can be represented numerically. Neural networks operate on numerical data, so tokenization is an essential preprocessing step.
+
+Key Takeaways
+LLMs process tokens, not raw words.
+Tokens are converted into numerical IDs.
+Those IDs are transformed into embeddings before being processed by the model.
