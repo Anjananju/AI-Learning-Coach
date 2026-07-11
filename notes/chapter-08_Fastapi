@@ -1,0 +1,40 @@
+What is FastAPI?
+Definition
+FastAPI is a modern Python web framework used to build APIs quickly and efficiently.
+It is designed for:
+High performance
+Automatic API documentation
+Type safety
+Easy development
+Why are we using FastAPI?
+Because our application needs a backend that can:
+Receive user requests
+Call the LLM
+Generate quizzes
+Save user progress
+Retrieve knowledge
+Communicate with the frontend
+FastAPI is well-suited for all of these.
+What is a Backend?
+A backend is software that runs on a server and processes requests from clients.
+Responsibilities include:
+Business logic
+Database interaction
+Authentication
+Calling external APIs (like an LLM)
+What is an API Endpoint?
+An endpoint is a specific URL that performs a particular action.
+Example:
+GET /health
+Returns the application's health status.
+POST /learn
+Explains an AI concept.
+POST /quiz
+Generates a quiz.
+Interview Question
+Why FastAPI instead of Flask?
+A good answer:
+Better performance
+Automatic OpenAPI/Swagger documentation
+Built-in request validation using Python type hints
+Excellent support for asynchronous programming
