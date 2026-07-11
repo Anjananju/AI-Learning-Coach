@@ -78,3 +78,12 @@ Instead, one endpoint can handle all of them:
 /courses?price=paid
 
 This makes APIs much more flexible.
+
+
+
+
+Path parameters identify a specific resource (e.g., /course/5).
+Query parameters filter or customize the response (e.g., /courses?level=beginner).
+FastAPI automatically validates and converts parameter types.
+Query parameters can be required or optional by providing default values.
+Multiple query parameters can be combined using &.
