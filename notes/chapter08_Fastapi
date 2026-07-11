@@ -79,3 +79,7 @@ Excellent support for asynchronous programming
 
 
 
+What is Uvicorn?
+Answer:
+Uvicorn is an ASGI server that runs FastAPI applications. It receives HTTP requests from clients, passes them to the FastAPI application, and returns HTTP responses.
+
