@@ -55,3 +55,26 @@ Whereas:
 means:
 
 Give me courses, but only the beginner ones.
+
+
+
+
+Why use Query Parameters?
+
+Imagine our AI Learning Companion has hundreds of courses.
+
+Without query parameters, you'd need separate endpoints like:
+
+/beginner_courses
+/advanced_courses
+/free_courses
+/paid_courses
+
+Instead, one endpoint can handle all of them:
+
+/courses?level=beginner
+/courses?level=advanced
+/courses?price=free
+/courses?price=paid
+
+This makes APIs much more flexible.
