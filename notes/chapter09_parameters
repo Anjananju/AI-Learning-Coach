@@ -1,0 +1,57 @@
+When you search for:
+
+https://www.google.com/search?q=FastAPI
+
+Everything after the ? is a query parameter.
+
+?q=FastAPI
+
+Here:
+
+q = parameter name
+FastAPI = value
+
+Google reads it as:
+
+Search for "FastAPI".
+
+More examples
+/products?category=laptop
+
+means:
+
+Show only laptops.
+
+/users?age=25
+
+means:
+
+Show users whose age is 25.
+
+/courses?level=beginner
+
+means:
+
+Show beginner courses.
+
+Path Parameter vs Query Parameter
+Path Parameter	Query Parameter
+Identifies a specific resource	Filters or modifies the request
+/course/5	/courses?level=beginner
+Course ID is required	Filter is optional
+
+Think of it like this:
+
+/course/5
+
+means:
+
+Give me this exact course.
+
+Whereas:
+
+/courses?level=beginner
+
+means:
+
+Give me courses, but only the beginner ones.
