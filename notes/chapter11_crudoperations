@@ -131,3 +131,18 @@ Restarting the server clears the data.
 Pydantic Models
 A request body is converted into a Student object.
 Fields can be accessed using dot notation (student.name).
+
+
+
+
+Update a Student (PUT)
+What is PUT?
+
+PUT is used to replace or update an existing resource.
+
+Real-world examples:
+
+Update your LinkedIn profile.
+Change your email address.
+Edit your Instagram bio.
+Update your shipping address on Amazon.
