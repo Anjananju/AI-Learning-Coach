@@ -1,0 +1,72 @@
+What is a Request Body?
+
+Suppose a user signs up for our AI Learning Companion.
+
+The frontend needs to send this information:
+
+{
+  "name": "Anjana",
+  "email": "anjana@example.com",
+  "experience": 8
+}
+
+This JSON is called the request body.
+
+Unlike path or query parameters, the data is sent inside the HTTP request.
+
+First, let's understand the difference
+
+Imagine you're ordering food online.
+
+Path Parameter
+/restaurant/15
+
+Means:
+
+Show restaurant number 15.
+
+Query Parameter
+/restaurants?city=Bangalore
+
+Means:
+
+Show restaurants in Bangalore.
+
+Request Body
+{
+   "food": "Pizza",
+   "quantity": 2,
+   "address": "Whitefield"
+}
+
+Means:
+
+Here are all the details for my order.
+
+Pydantic
+
+FastAPI uses Pydantic to validate incoming data.
+
+You don't have to manually check:
+
+Is the name missing?
+Is age a number?
+Is email a string?
+
+Pydantic does that automatically.
+
+
+
+  How does FastAPI know?
+
+This function:
+
+def create_student(student: Student):
+
+tells FastAPI:
+
+Student is a Pydantic model.
+Read the request body.
+Convert the JSON into a Student object.
+Validate the data.
+Pass it to the function.
