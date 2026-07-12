@@ -116,3 +116,18 @@ def create_student(student: Student):
     }
 
 This is object-oriented programming (OOP) in action.
+
+
+
+CRUD
+Create → POST
+Read → GET
+Update → PUT
+Delete → DELETE
+In-memory storage
+students = [] acts as a temporary database.
+Data exists only while the application is running.
+Restarting the server clears the data.
+Pydantic Models
+A request body is converted into a Student object.
+Fields can be accessed using dot notation (student.name).
