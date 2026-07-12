@@ -1,0 +1,118 @@
+What is CRUD?
+
+Almost every application performs these four operations:
+
+Operation	HTTP Method	Example
+Create	POST	Register a student
+Read	GET	Get all students
+Update	PUT	Update a student's details
+Delete	DELETE	Remove a student
+
+Examples:
+
+Instagram → Create a post
+WhatsApp → Read messages
+Amazon → Update your address
+Gmail → Delete an email
+
+These are all CRUD operations.
+
+
+
+Based on our code eg for this concept in main.py
+
+
+  Try this experiment:
+
+Add three students.
+Verify /students returns all three.
+Stop the server (Ctrl + C).
+Start it again.
+Call /students.
+
+You'll get:
+
+[]
+
+Why?
+
+Because
+
+students = []
+
+exists only in RAM (memory).
+
+When the application stops, the memory is cleared.
+
+That's why real applications use databases like:
+
+PostgreSQL
+MySQL
+MongoDB
+
+We'll learn those later.
+
+Understanding the Flow
+
+Let's follow one request.
+
+Client sends
+POST /student
+
+with
+
+{
+    "name": "Anjana",
+    "email": "anjana@example.com",
+    "experience": 8
+}
+
+↓
+
+FastAPI validates the data.
+
+↓
+
+Creates a Student object.
+
+↓
+
+Runs:
+
+students.append(student)
+
+↓
+
+The list now contains one student.
+
+↓
+
+Later
+
+GET /students
+
+returns the contents of that list.
+
+
+
+
+A Small Python Concept
+
+Notice that student is not a dictionary. It's a Pydantic model instance.
+
+You can access its fields like this:
+
+student.name
+student.email
+student.experience
+
+For example:
+
+@app.post("/student")
+def create_student(student: Student):
+    return {
+        "name": student.name,
+        "experience": student.experience
+    }
+
+This is object-oriented programming (OOP) in action.
